@@ -7,8 +7,8 @@ highlighter: null
 markdown: kramdown
 extensions: [fenced_code_blocks]
 excerpt_separator: "<!--more-->"
-url: https://heliumjk.github.io
-baseurl: "/heliumjk.github.io"
+url: https://kartik-sama.github.io/
+baseurl: "/kartik-sama.github.io"
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
@@ -21,8 +21,8 @@ google_ad_client: ca-pub-9204963049240271
 post_limit: 5
 
 
-title : Helium Jekyll
-tagline: Bootstrap 4 UI kit for jekyll
+title : Hola! This is Sai Karthik Sama
+tagline: Computer Science Junior @ IIIT Bangalore
 author : 
   name : Antonio Trento
   site: https://lantoniotrento.github.io
