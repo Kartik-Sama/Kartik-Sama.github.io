@@ -1,28 +1,32 @@
+@import 'colors.css';
+
 *{
     margin:0;
     padding:0;
-    font-family: "Poppins", sans-serif; /*Explore it a bit*/
+    font-family: "Oxygen", sans-serif; /*Explore it a bit*/
     box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #080808;
-    color: whitesmoke;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url("Images/desktopAbstract.jpg");
+    background-image: url("./Images/trail.webp");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .container{
     padding: 10px 10%;
 }
+
 
 /* Navbar */
 nav{
@@ -36,25 +40,26 @@ nav{
 }
 nav ul {
     display: flex;
-    justify-content: left;
+    justify-content: right;
 }
 nav ul li{
     display: inline-block;
     list-style: none;
-    align-items: left;
+    align-items: right;
     margin: 10px 20px;
 }
 nav ul li a{
-    color: whitesmoke;
+    color: var(--color-heading);
     text-decoration:  none;
     font-size: 18px;
+    font-weight: 600;
     position: relative;
 }
 nav ul li a::after{ /*Explore the hover further*/
     content: '';
     width: 0;
     height: 3px;
-    background-color: #ff004f;
+    background-color: var(--color-tabs);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -71,20 +76,22 @@ nav .fa-solid{
 
 .header-text{
     margin-top: 20%;
+    margin-left: 60%;
     font-size: 30px;
+    color: var(--color-tabs);
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
 }
 .header-text span{
-    color: #ff004f;
+    color: var(--color-heading);
 }
 
 /* About Section */
 #about{
     padding: 80px 0;
-    color: #ababab;
+    color: var(--color-text);
 }
 
 .row{
@@ -98,7 +105,7 @@ nav .fa-solid{
 }
 .about-col-1 img{
     width: 100%;
-    height: 90%;
+    /* height: 90%; */
     border-radius: 15px;
 }
 .about-col-2{
@@ -107,7 +114,10 @@ nav .fa-solid{
 .sub-title{
     font-size: 60px;
     font-weight: 60%;
-    color: whitesmoke;
+    color: var(--color-heading);
+}
+#about p{
+    color: var(--color-text);
 }
 
 .tab-titles{
@@ -164,7 +174,8 @@ nav .fa-solid{
     /* Look back to add scroll bar just in case */
 }
 .worksamples-list div{
-    background-color: rgb(29, 41, 41);
+    background-color: var(--color-tabs);
+    color: var(--color-background);
     padding: 40px;
     font: 13px;
     font-weight: 300;
@@ -256,7 +267,8 @@ nav .fa-solid{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff0051;
+    border: 1px solid var(--color-tabs);
+    background-color: var(--color-tabs);
     padding: 14px 50px;
     border-radius: 6px;
     color: whitesmoke;
@@ -279,7 +291,7 @@ nav .fa-solid{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: var(--color-tabs);
     margin-right: 15px;
     font-size: 25px;
 }
@@ -290,17 +302,17 @@ nav .fa-solid{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: var(--color-tabs);
     display: inline-block;
     transition: color transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: var(--color-heading);
     transform: scale(1.1);
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: var(--color-heading);
 }
 .contact-right form{
     width: 100%;
@@ -309,10 +321,10 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background-color: #262626;
+    background-color: var(--color-tabs);
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: var(--color-background);
     font-size: 18px;
     border-radius: 6px;
 }
@@ -324,7 +336,7 @@ form .btn2 {
 }
 
 #msg{
-    color: #61b752;
+    color: var(--color-sucess);
     margin-top: -40px;
     display: block;
 }
@@ -333,7 +345,7 @@ form .btn2 {
 
 @media only screen and (max-width: 600px) {
     #header{
-        background-image: url("Images/phoneBack.jpg");
+        background-image: url("Images/desktopAbstract.jpg");
     }
     .header-text{
         margin-top:100%;
