@@ -150,6 +150,9 @@ nav .fa-solid{
     list-style: none;
     margin: 10px 0;
 }
+.tab-contents ol li{
+    margin: 10px 30px;
+}
 .tab-contents ul li span{
     color: var(--color-heading);
     font-size:16px;
@@ -161,7 +164,15 @@ nav .fa-solid{
     font-style: italic;
     font-size:16px;
 }
-.tab-contents ul li span3{
+.tab-contents note{
+    font-style: italic;
+    font-size:12px;
+    color: var(--color-text)
+}
+.tab-contets highlight{
+    color:var(--color-heading)
+}
+.tab-contents ul li spansmall{
     font-size:14px;
 }
 .tab-contents{
@@ -170,7 +181,6 @@ nav .fa-solid{
 .tab-contents.active-tab{
     display: block;
 }
-
 /* Work Samples */
 #worksamples {
     padding: 30px 0;
@@ -360,7 +370,7 @@ form .btn2 {
         background-image: url("Images/templateBackgroundSmall.png");
     }
     .header-text{
-        margin-top:50%;
+        margin-top:60%;
         font-size: 16px;
     }
     .header-text h1{
