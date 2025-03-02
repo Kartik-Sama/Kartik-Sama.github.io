@@ -2,10 +2,11 @@
     --color-background: #FFEDDF;
     --color-text: #083D77 ;
     --color-heading: #EA4861;
-    --color-tabs: #083D77;
+    --color-tabs: rgba(8, 61, 119);
     /* --color-tabs: #419F99; */
     --color-sucess: rgb(15, 197, 15);
-    --color-ch1: #042a2b;
     --color-ch2: #461220;
     --color-ch3: #FCBEEB;
+
+    --nav-height: 5vh;
 }

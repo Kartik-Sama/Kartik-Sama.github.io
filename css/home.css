@@ -1,0 +1,9 @@
+#home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Images/templateBackground.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: calc(100vh - 1vh);
+}
