@@ -16,24 +16,11 @@ body{
 }
 
 .container{
-    padding: 10px 10%;
+    padding: 5% 5%;
 }
 
-.page {
+#page {
     height: calc(100vh - var(--nav-height));
-}
-.header-text{
-    margin-top: 30%;
-    margin-left: 60%;
-    font-size: 30px;
-    color: var(--color-background);
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-}
-.header-text span{
-    color: var(--color-ch3);
 }
 
 .row{
@@ -138,56 +125,8 @@ body{
 
 @media only screen and (max-width: 600px) {
     *{
-        overflow: visible;
+        overflow: hidden;
     }
-
-    #header{
-        background-image: url("Images/templateBackgroundSmall.png");
-    }
-    .header-text{
-        margin-top:60%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav {
-        margin: 0px 0px;
-        justify-content: right;
-        background-color: rgb(0,0,0,0);
-    }
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
-        color: whitesmoke;
-    }
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: right;
-        background: rgba(4, 42, 43, 0.6);
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 40%;
-        height: 70%;
-        overflow-y: auto;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: block;
-        position: relative;
-        /* margin: 25px; */
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 20px;
-        cursor: pointer;
-    }
-
     .sub-title{
         font-size: 35px;
     }

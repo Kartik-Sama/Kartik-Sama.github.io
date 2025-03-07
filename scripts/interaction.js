@@ -36,13 +36,22 @@ document.addEventListener("click", function(e) {
 });
 
 function openmenu(){
+    var barsIcon = document.querySelector('.fa-bars');
+    var xmarkIcon = document.querySelector('.fa-xmark');
     var sidemenu = document.getElementById("sidemenu");
-    sidemenu.style.right = "0px";
+    sidemenu.style.display = "block";
+    barsIcon.style.display = "none";
+    xmarkIcon.style.display = "block";
 }
 
 function closemenu(){
+    var barsIcon = document.querySelector('.fa-bars');
+    var xmarkIcon = document.querySelector('.fa-xmark');
     var sidemenu = document.getElementById("sidemenu");
-    sidemenu.style.right = "-200px";
+    sidemenu.style.display = "none";
+    barsIcon.style.display = "block";
+    xmarkIcon.style.display = "none";
+    toggleIcons();
 }
 
 // Optionally, reapply the saved state when new content loads
