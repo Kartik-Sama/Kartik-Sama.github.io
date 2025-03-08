@@ -14,27 +14,32 @@ body{
     background-color: var(--color-background);
     color: var(--color-text);
 }
-
 .container{
     padding: 5% 5%;
 }
-
 .column-flex-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
+.custom-heading {
+    font-size: 5vh;
+    font-weight: 60%;
+    color: var(--color-heading);
+    margin-bottom: 2vh;
+}
+i {
+    vertical-align: middle;
+    margin-right: 0.5vw;
+}
 #page {
     height: calc(100vh - var(--nav-height));
 }
-
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .about-col-1{
     flex-basis: 35%;
 }
@@ -112,12 +117,13 @@ body{
     height: 100%;
 }
 .btn{
+    font-size: 2vh;
     display: block;
-    margin: 50px auto;
+    margin: 1vw auto;
     width: fit-content;
     border: 1px solid var(--color-tabs);
     background-color: var(--color-tabs);
-    padding: 14px 50px;
+    padding: 2vh 3vh;
     border-radius: 6px;
     color: whitesmoke;
     text-decoration: none;
@@ -133,8 +139,8 @@ body{
     *{
         overflow: hidden;
     }
-    .sub-title{
-        font-size: 35px;
+    .custom-heading{
+        font-size: 4vh;
     }
     .about-col-1, .about-col-2{
         flex-basis: 100%;

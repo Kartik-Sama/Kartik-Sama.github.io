@@ -28,15 +28,7 @@
     color: var(--color-text);
     overflow-y: auto; /* add scroll if content exceeds the fixed height */
 }
-#bio-col-2 h1{
-    font-size: 5vh;
-    font-weight: 60%;
-    color: var(--color-heading);
-    margin-bottom: 2vh;
-}
-.tab-links i {
-    margin-right: 0.5vw;
-}
+
 .tab-titles{
     display: flex;
     margin-bottom: 3vh;
@@ -57,7 +49,7 @@
     background-color: #ff004f;
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -5px;
     transition: 0.5s;
 }
 .tab-links.active-link::after{
