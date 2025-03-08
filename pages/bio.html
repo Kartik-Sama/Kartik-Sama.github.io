@@ -1,0 +1,22 @@
+<script src="scripts/interaction.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadTabContent('education');
+    });
+</script>
+
+<div id="bio">
+    <div class="column-flex-center bio-col" id="bio-col-1">
+        <img src="Images/portfolioIntroPlane.png">
+    </div>
+    <div class="column-flex-center bio-col" id="bio-col-2">
+        <img src="Images/portfolioIntroPlane.png">
+        <h1>A snapshot &#128248 of me</h1>
+        <div class="tab-titles"> 
+            <p class="tab-links active-link" onclick="openTab(event,'education')"><i class="fa-solid fa-user-graduate"></i>Education</p>
+            <p class="tab-links" onclick="openTab(event,'work_experience')"><i class="fa-solid fa-laptop"></i>Work Experience</p>
+            <p class="tab-links" onclick="openTab(event,'achievements')"><i class="fa-solid fa-award"></i>Achievements</p>
+    </div>
+    <div class="tab-contents">
+    </div>
+</div>

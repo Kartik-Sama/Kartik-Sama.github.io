@@ -1,7 +1,8 @@
 :root {
     --color-background: #FFEDDF;
     --color-text: rgb(8, 61, 119) ;
-    --color-heading: #EA4861;
+    --color-secondary-text: #461220;
+    --color-heading: #FF004F;
     --color-tabs: rgba(8, 61, 119);
     --color-text-opacity: rgba(9, 64, 124, 0.6);
     /* --color-tabs: #419F99; */

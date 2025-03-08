@@ -19,6 +19,12 @@ body{
     padding: 5% 5%;
 }
 
+.column-flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #page {
     height: calc(100vh - var(--nav-height));
 }

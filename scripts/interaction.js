@@ -1,6 +1,32 @@
-// Remove direct global bindings; we’ll use delegation instead
+document.addEventListener('DOMContentLoaded', () => {
+    const defaultTab = document.querySelector('.tab-links.active-link');
+    loadTabContent('education');
+});
 
-function opentab(e, tabname) {
+// Remove direct global bindings; we’ll use delegation instead
+function loadTabContent(tabname) {
+    fetch("pages/bio-columns/" + tabname + ".html")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.text();
+        })
+        .then(html => {
+            // Select the target container where you want to insert content.
+            // Adjust the selector if necessary (e.g., using an id like "tab-container")
+            const container = document.querySelector('.tab-contents');
+            if (container) {
+                container.innerHTML = html;
+            }
+        })
+        .catch(error => {
+            console.error("Error loading tab content:", error);
+        });
+}
+
+
+function openTab(e, tabname) {
     // Get all tab links and contents from the current document
     let tablinks = document.getElementsByClassName("tab-links");
     let tabcontents = document.getElementsByClassName("tab-contents");
@@ -9,18 +35,8 @@ function opentab(e, tabname) {
     for (let link of tablinks) {
         link.classList.remove("active-link");
     }
-    for (let content of tabcontents) {
-        content.classList.remove("active-tab");
-    }
-
-    // Add active class to the clicked tab link and its corresponding tab content
     e.currentTarget.classList.add("active-link");
-    let targetContent = document.getElementById(tabname);
-    if (targetContent) {
-        targetContent.classList.add("active-tab");
-    }
-    // Save the state to localStorage so it persists after reloads
-    localStorage.setItem("activeTab", tabname);
+    loadTabContent(tabname);
 }
 
 // Global event delegation to catch clicks on elements with class "tab-links"
@@ -51,7 +67,6 @@ function closemenu(){
     sidemenu.style.display = "none";
     barsIcon.style.display = "block";
     xmarkIcon.style.display = "none";
-    toggleIcons();
 }
 
 // Optionally, reapply the saved state when new content loads

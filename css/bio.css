@@ -1,0 +1,113 @@
+#bio{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding-left : 5vw;
+    padding-right : 5vw;
+}
+
+.bio-col{
+    margin-top: 10vh;
+    justify-content: flex-start;
+}
+#bio-col-1{
+    align-items: center;
+    flex-basis: 30%;
+}
+#bio-col-1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+#bio-col-2 img{
+    display: none;
+}
+#bio-col-2{
+    flex-basis:60%;
+    color: var(--color-text);
+    overflow-y: auto; /* add scroll if content exceeds the fixed height */
+}
+#bio-col-2 h1{
+    font-size: 5vh;
+    font-weight: 60%;
+    color: var(--color-heading);
+    margin-bottom: 2vh;
+}
+.tab-links i {
+    margin-right: 0.5vw;
+}
+.tab-titles{
+    display: flex;
+    margin-bottom: 3vh;
+    overflow: visible;
+}
+.tab-links{
+    margin-right:50px;
+    font-size: 2vh;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents {
+    max-height: 70vh; /* Adjust this value based on your layout */
+    overflow-y: auto;
+}
+
+/* Styles for each timeline list item */
+.timeline-item {
+    margin-bottom: 1vh; /* add spacing between items */
+    padding-bottom: 1vh;
+    font-size: 1.5vh;
+}
+/* Flex container for header with subheading and timeline */
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; /* aligns timeline text with subheading */
+    margin-bottom: 0.5vh;
+}
+.timeline-header .subheading {
+    font-weight: bold;
+}
+.timeline-header .timeline {
+    color: var(--color-secondary-text, #461220);
+}
+
+@media only screen and (max-width: 600px), (orientation: portrait) {
+    .bio-col {
+        margin-top: 2vh;
+    }
+    #bio-col-1  {
+        flex-basis: 0%;
+    }
+    #bio-col-2  {
+        flex-basis: 100%;
+        height: 90vh;
+        width: auto;
+        /* justify-content: center; */
+        align-items: center;
+        flex-shrink: 0;
+    }
+    #bio-col-2 img{
+        display: block;
+        height: 15vh;
+    }
+    .tab-contents {
+        max-height: 55vh;
+    }
+}
